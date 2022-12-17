@@ -10,11 +10,15 @@ typedef double Value;
 typedef struct {
     int capacity;
     int count;
-    Value * values;
+    Value *values;
 } ValueArray;
 
-void initValueArray(ValueArray * array);
-void writeValueArray(ValueArray  * array, Value value);
-void freeValueArray(ValueArray * array);
+void initValueArray(ValueArray *array);
+
+void writeValueArray(ValueArray *array, Value value);
+
+void printValue(Value value);
+
+void freeValueArray(ValueArray *array);
 
 #endif //CLOX_VALUE_H

@@ -1,6 +1,7 @@
 //
 // Created by tblyl on 2022/12/11.
 //
+#include <stdio.h>
 #include "value.h"
 #include "common.h"
 #include "memory.h"
@@ -23,4 +24,8 @@ void writeValueArray(ValueArray * array, Value value) {
 void freeValueArray(ValueArray * array) {
     FREE_ARRAY(Value , array->values, array->capacity);
     initValueArray(array);
+}
+
+void printValue(Value value) {
+    printf("%g", value);
 }
